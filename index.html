@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- Edit your academic information directly in this file. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Homepage of Yinrui Sun">
+    <meta name="color-scheme" content="light">
+    <title>Yinrui Sun | Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <main id="main-content">
+      <section class="intro" id="top" aria-labelledby="page-title">
+        <div class="intro-text">
+          <p class="eyebrow">Last update: Sep 2026</p>
+          <h1 id="page-title">
+            Yinrui Sun <span class="chinese-name" lang="zh-CN">孙寅瑞</span>
+          </h1>
+          <p> Welcome to my homepage! </p>
+          <p>
+            My name is Yinrui Sun. I am a tenure-track associate research fellow
+            at Business for Science & Technology, School of Management, University of Science and Technology of China.
+          </p>
+          <p> Email: yinruisun@ustc.edu.cn </p>
+        </div>
+        <figure
+          id="profile-photo-frame"
+          class="profile-photo profile-photo-placeholder"
+          aria-label="Profile photograph placeholder"
+        >
+          <span>Your photo</span>
+        </figure>
+      </section>
+
+      <details class="content-section" id="education">
+        <summary class="section-heading">
+          <span class="toggle-icon" aria-hidden="true"></span>
+          <h2>Education</h2>
+        </summary>
+        <div class="section-body">
+          <ul class="topic-list">
+            <li>
+            <p>Ph.D. in Statistics, Fudan University.</p> 
+            <p>  Advisor: Yin Xia. </p>
+            </li>
+            <li>B.S. in Mathematics and Applied Mathematics, Zhejiang University.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="content-section" id="research">
+        <summary class="section-heading">
+          <span class="toggle-icon" aria-hidden="true"></span>
+          <h2>Research</h2>
+        </summary>
+        <div class="section-body">
+
+          <p><strong>Publication</strong></p>
+
+          <ol class="publication-list">
+            <li>
+              <p class="paper-title">Optimal Integrative Estimation for Distributed Precision Matrices with Heterogeneity Adjustment</p>
+              <p>Yinrui Sun, Yin Xia</p>
+              <p class="venue">The Annals of Statistics, 2026+</p>
+            </li>
+            <li>
+              <p class="paper-title">A Decorrelating and Debiasing Approach to Simultaneous Inference for High-Dimensional Confounded Models</p>
+              <p>Yinrui Sun, Li Ma, Yin Xia</p>
+              <p class="venue">Journal of the American Statistical Association, 2024</p>
+            </li>
+          </ol>
+          
+          <p><strong>Technical Report</strong></p>
+
+          <ol class="publication-list">
+          <li>
+            <p class="paper-title">A Unified Framework for Large-Scale Inference of Classification: Error Rate Control and Optimality</p>
+            <p>Yinrui Sun, Yin Xia</p>
+            <p class="venue">arXiv preprint</p>
+          </li>
+          </ol>
+
+        </div>
+      </details>
+
+
+      <details class="content-section" id="service">
+        <summary class="section-heading">
+          <span class="toggle-icon" aria-hidden="true"></span>
+          <h2>Service</h2>
+        </summary>
+        <div class="section-body">
+          <ul class="topic-list">
+          <li>
+          <p>
+            Referee for:
+          </p>
+          <p style="color: var(--muted);">
+            IEEE Transactions on Information Theory; Journal of Business & Economic Statistics; Journal of Computational and Graphical Statistics; Journal of the American Statistical Association; Scientific Reports; Statistica Sinica; Test; The American Statistician; The Annals of Statistics.
+          </p>
+          </li>
+          </ul>
+        </div>
+      </details>
+
+    </main> 
+
+    <script>
+      /*
+       * RANDOM PORTRAITS
+       *
+       * 1. Put your photographs in the assets folder.
+       * 2. Add each filename to the list below.
+       * 3. The portraitAlt text below identifies you to screen readers.
+       */
+      const candidatePhotos = [
+        "assets/photo1.jpeg",
+        "assets/photo2.jpg",
+        // "assets/photo3.jpg",
+      ];
+
+      const portraitAlt = "Portrait of Yinrui Sun";
+      const photoFrame = document.getElementById("profile-photo-frame");
+
+      if (candidatePhotos.length > 0) {
+        const randomIndex = Math.floor(Math.random() * candidatePhotos.length);
+        const chosenPhoto = candidatePhotos[randomIndex];
+        const portrait = new Image();
+
+        portrait.alt = portraitAlt;
+        portrait.addEventListener("load", () => {
+          photoFrame.classList.remove("profile-photo-placeholder");
+          photoFrame.replaceChildren(portrait);
+          photoFrame.removeAttribute("aria-label");
+        });
+        portrait.src = chosenPhoto;
+      }
+    </script>
+  </body>
+</html>
