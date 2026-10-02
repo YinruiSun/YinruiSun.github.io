@@ -247,12 +247,6 @@ h1 {
   font-style: italic;
 }
 
-.more-link {
-  margin-left: 2.35rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
-}
-
 @keyframes reveal-section {
   from {
     opacity: 0;
