@@ -242,9 +242,8 @@ h1 {
   margin: 0;
 }
 
-.publication-list .venue {
+.muted {
   color: var(--muted);
-  font-style: italic;
 }
 
 @keyframes reveal-section {
